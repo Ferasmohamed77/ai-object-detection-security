@@ -1,0 +1,148 @@
+# Setup and Run Guide (Beginner Friendly)
+
+This guide explains how to set up and run the AI Object Detection Security System from scratch.
+
+---
+
+## 1. Requirements
+
+Make sure you have the following installed:
+
+- Python 3.8 or higher
+- A webcam (USB camera or built-in camera)
+- Internet connection (to install dependencies)
+
+---
+
+## 2. Download the Project
+
+### Option 1: Clone using Git
+
+git clone https://github.com/Ferasmohamed77/ai-object-detection-security.git  
+cd ai-object-detection-security  
+
+### Option 2: Download ZIP
+
+- Go to the GitHub repository  
+- Click "Code" → "Download ZIP"  
+- Extract the folder  
+
+---
+
+## 3. Project Structure
+
+Ensure your project is organized like this:
+
+ai-object-detection-security/  
+│  
+├── src/  
+│   ├── ai_security.py  
+│   └── gui_ai_security.py  
+│  
+├── models/  
+│   └── best.onnx  
+│  
+├── demo/  
+├── dataset_sample/  
+├── docs/  
+├── README.md  
+└── requirements.txt  
+
+---
+
+## 4. Install Dependencies
+
+Open terminal in the project folder and run:
+
+pip install -r requirements.txt  
+
+---
+
+## 5. Verify Model File
+
+Make sure this file exists:
+
+models/best.onnx  
+
+If this file is missing, the system will not run.
+
+---
+
+## 6. Run the Program
+
+### Option 1: GUI Version (Recommended)
+
+python src/gui_ai_security.py  
+
+### Option 2: Basic Version
+
+python src/ai_security.py  
+
+---
+
+## 7. What Happens When You Run It
+
+- The camera starts automatically  
+- Video frames are captured in real-time  
+- The AI model processes each frame  
+- Detected objects are shown with bounding boxes  
+- Labels and confidence scores are displayed  
+- (Optional) Hardware like relay can be triggered  
+
+---
+
+## 8. Troubleshooting
+
+### Camera not opening
+- Make sure no other app is using the camera  
+- Try changing camera index (0 → 1 in code)  
+
+### Model not found
+- Ensure best.onnx is inside the models/ folder  
+
+### Missing modules error
+Run again:
+
+pip install -r requirements.txt  
+
+### Slow performance
+- Close other applications  
+- Use lightweight model (e.g., YOLOv5n)  
+
+---
+
+## 9. Running on Raspberry Pi (Optional)
+
+### Enable camera
+
+sudo raspi-config  
+
+→ Interface Options → Camera → Enable  
+
+### Install dependencies
+
+pip3 install -r requirements.txt  
+
+### Run program
+
+python3 src/gui_ai_security.py  
+
+---
+
+## 10. System Summary
+
+This system uses an AI model to detect objects in real-time using a camera.  
+It processes video frames, identifies objects, and displays results instantly.  
+
+It can also connect to hardware (like a relay) to trigger actions such as:
+- Turning on a light  
+- Activating an alarm  
+- Controlling devices  
+
+---
+
+## 11. Notes
+
+- Designed for real-time performance  
+- Works on both PC and Raspberry Pi  
+- Performance depends on hardware capability  

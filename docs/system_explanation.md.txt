@@ -1,0 +1,27 @@
+# System Overview
+
+This project is a real-time AI object detection security system deployed on a Raspberry Pi. It detects objects from a live camera feed and can trigger hardware actions (e.g., relay) based on detections.
+
+## Pipeline
+
+Camera → Frame Capture → Preprocessing → ONNX Model → Detection Output → Display / Action
+
+1. Camera captures live video frames
+2. Frames are resized and normalized
+3. ONNX model performs inference
+4. Detected objects are drawn with bounding boxes
+5. Optional: trigger relay (e.g., alarm, light, fan)
+
+## Key Components
+
+- Raspberry Pi (controller)
+- USB / CSI Camera (input)
+- ONNX Model (AI inference)
+- Relay Module (hardware output)
+- Python + OpenCV (processing)
+
+## Use Case
+
+- Security monitoring
+- Intrusion detection
+- Smart automation systems

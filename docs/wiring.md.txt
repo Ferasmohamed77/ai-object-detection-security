@@ -1,0 +1,28 @@
+# Raspberry Pi Relay Wiring
+
+## Components
+- Raspberry Pi
+- Relay Module (1-channel)
+- External device (LED / fan / alarm)
+
+## GPIO Connections
+
+| Relay Pin | Raspberry Pi Pin |
+|----------|-----------------|
+| VCC      | 5V (Pin 2 or 4) |
+| GND      | GND (Pin 6)     |
+| IN       | GPIO17 (Pin 11) |
+
+## External Device Wiring
+
+Relay acts like a switch:
+
+- COM → Power source
+- NO (Normally Open) → Device
+- Device → Ground
+
+## How It Works
+
+- When GPIO17 = HIGH → Relay activates
+- Circuit closes → Device turns ON
+- When GPIO17 = LOW → Device OFF

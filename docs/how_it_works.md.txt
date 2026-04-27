@@ -1,0 +1,12 @@
+# Simple Explanation
+
+This system uses an AI model to detect objects in real time from a camera.
+
+When an object is detected:
+- A bounding box is drawn on screen
+- The system can trigger a hardware action using a relay
+
+Example:
+If a person is detected → turn on alarm/light
+
+This makes it useful for smart security and automation.
