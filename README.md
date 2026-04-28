@@ -13,7 +13,7 @@ Real-time AI object detection system using ONNX and OpenCV. Designed for securit
 Python, OpenCV, ONNX Runtime
 
 ## Demo
-![Demo](demo/control_easy.png)
+![Demo](demo/2026-04-07-153238_1920x1200_scrot.png)
 
 ## Run
 pip install -r requirements.txt
